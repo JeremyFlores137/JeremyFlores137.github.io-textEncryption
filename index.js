@@ -4,10 +4,11 @@ const copyBtn = document.querySelectorAll('.copiar-btn');
 const textInput = document.getElementById('text-input');
 const resText = document.getElementById('res-text');
 let text = '';
-let aux = [];
+let aux = '';
 
 textInput.addEventListener('input', function (e) {
   text = e.target.value;
+  aux = text;
 });
 
 encryptBtn.addEventListener('click', function () {
@@ -25,13 +26,13 @@ encryptBtn.addEventListener('click', function () {
   text = text.split('');
   text = text.map((char) => {
     switch (char) {
-      case 'a':
+      case 'e':
         return 'enter';
         break;
-      case 'e':
+      case 'i':
         return 'imes';
         break;
-      case 'i':
+      case 'a':
         return 'ai';
         break;
       case 'o':
@@ -48,37 +49,22 @@ encryptBtn.addEventListener('click', function () {
   aux = text;
   resText.innerHTML = text.join('');
   text = text.join('');
-  encryptBtn.disabled = true;
 });
 
 decryptBtn.addEventListener('click', function () {
   textInput.disabled = false;
   encryptBtn.disabled = false;
-  aux = aux.map((char) => {
-    switch (char) {
-      case 'enter':
-        return 'a';
-        break;
-      case 'imes':
-        return 'e';
-        break;
-      case 'ai':
-        return 'i';
-        break;
-      case 'ober':
-        return 'o';
-        break;
-      case 'ufat':
-        return 'u';
-        break;
-      default:
-        return char;
-        break;
-    }
-  });
-  resText.innerHTML = aux.join('');
-  text = aux.join('');
-  decryptBtn.disabled = true;
+  let aux = text;
+  aux = aux
+    .replaceAll('enter', 'e')
+    .replaceAll('imes', 'i')
+    .replaceAll('ai', 'a')
+    .replaceAll('ober', 'o')
+    .replaceAll('ufat', 'u');
+
+  resText.innerHTML = aux;
+  text = aux;
+  
 });
 
 copyBtn[0].addEventListener('click', () => {
