@@ -15,7 +15,7 @@ encryptBtn.addEventListener('click', function () {
     resText.innerHTML = `<div class = "notification">
                             <h2>NINGÚN MENSAJE FUE ENCONTRADO 😕</h2>
                             <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-                            <img class="ops-img" src="./muñeco.png" alt = "Oops... No text found"/>
+                            <img class="ops-img" src="./img/muñeco.png" alt = "Oops... No text found"/>
                           </div>
                         `;
     return;
