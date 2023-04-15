@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f5fc;
+}
+h1 {
+  color: #1d3557;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+span {
+  font-style: italic;
+  color: #03045e;
+  text-decoration: underline;
+}
+main {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding: 1em;
+}
+section {
+  display: flex;
+  width: 100%;
+}
+.encryption-div {
+  display: grid;
+  width: 100%;
+  height: 70vh;
+}
+.encryption-btn,
+.decryption-btn {
+  cursor: pointer;
+  width: 35%;
+  height: 70%;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 1rem;
+}
+.decryption-btn {
+  margin-left: 1em;
+  background-color: #d8dfe8;
+  color: #0a3871;
+  transition: all 0.5s;
+}
+.encryption-btn {
+  background-color: #0a3871;
+  color: white;
+  transition: all 0.5s;
+}
+.encryption-btn:hover,
+.encryption-btn:focus {
+  background-color: #000814;
+}
+.decryption-btn:hover,
+.decryption-btn:focus {
+  background-color: #b0b3b8;
+}
+#text-input {
+  font-size: 1.2rem;
+  padding: 1em;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border-radius: 10px;
+  color: #0a3871;
+  background-color: #f3f5fc;
+  transition: all 1s;
+}
+#text-input::placeholder {
+  color: #0a3871;
+  font-size: 1.2rem;
+}
+.text-div {
+  position: relative;
+  height: 50vh;
+}
+.resultado {
+  position: relative;
+  margin-left: 1em;
+  width: 100%;
+  height: 70vh;
+  border-radius: 5%;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 1px 1px 8px 0.1px;
+  font-size: 1.2rem;
+}
+.copiar-btn {
+  width: 4em;
+  height: 2em;
+  border-radius: 5px;
+  border-style: none;
+  position: absolute;
+  cursor: pointer;
+  right: 12px;
+  top: 12px;
+  background-color: #caccd2;
+  transition: all 0.3s;
+}
+.copiar-btn:hover,
+.copiar-btn:focus {
+  background-color: #abadb0;
+}
+.btn {
+  width: 100%;
+  text-align: center;
+}
+.disclamer {
+  margin-bottom: 2.5em;
+}
+.notification {
+  text-align: center;
+}
+.ops-img{
+  width: 20em;
+}

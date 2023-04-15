@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./app.css" />
+    <title>Text Encryption</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Text Encryption by <span>Ieremy Flores</span></h1>
+      <p class="disclamer">Solo letras minúsculas y sin acentos</p>
+      <section>
+        <div class="encryption-div">
+          <div class="text-div">
+            <textarea
+              id="text-input"
+              name="text-input"
+              placeholder="Ingrese texto aquí"
+              minlength="1"
+            ></textarea>
+            <button class="copiar-btn">copy</button>
+          </div>
+          <div class="btn">
+            <button class="encryption-btn">Encriptar</button>
+            <button class="decryption-btn">Desencriptar</button>
+          </div>
+        </div>
+        <div class="resultado">
+          <p id="res-text"></p>
+          <button class="copiar-btn">copy</button>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
