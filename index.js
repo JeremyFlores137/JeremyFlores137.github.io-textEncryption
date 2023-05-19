@@ -2,25 +2,36 @@ const encryptBtn = document.querySelector('.encryption-btn');
 const decryptBtn = document.querySelector('.decryption-btn');
 const copyBtn = document.querySelectorAll('.copiar-btn');
 const textInput = document.getElementById('text-input');
-const resText = document.getElementById('res-text');
+let resText = document.getElementById('res-text') | '';
+const resTextOutput = document.getElementById('res-text-output');
 let text = '';
+let firstSentence =''
 let aux = '';
 
 textInput.addEventListener('input', function (e) {
   text = e.target.value;
   aux = text;
+  firstSentence = text
 });
 
 encryptBtn.addEventListener('click', function () {
   if (text === '') {
-    resText.innerHTML = `<div class = "notification">
-                            <h2>NINGÚN MENSAJE FUE ENCONTRADO 😕</h2>
-                            <p>Ingresa el texto que deseas encriptar o desencriptar</p>
-                            <img class="ops-img" src="./img/muñeco.png" alt = "Oops... No text found"/>
-                          </div>
-                        `;
+    resTextOutput.innerHTML = `<div class = "notification">
+                                <h2>NINGÚN MENSAJE FUE ENCONTRADO 😕</h2>
+                                <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                                <img class="ops-img" src="./img/muñeco.png" alt = "Oops... No text found"/>
+                              </div>
+                            `;
     return;
   }
+  resTextOutput.innerHTML = `<textarea
+                              id="res-text"
+                              class="text-output-div"
+                              name="text-output"
+                              readonly
+                              >
+                            </textarea>`;
+  resText = document.getElementById('res-text');
   textInput.disabled = true;
   decryptBtn.disabled = false;
   text = text.split('');
@@ -28,22 +39,16 @@ encryptBtn.addEventListener('click', function () {
     switch (char) {
       case 'e':
         return 'enter';
-        break;
       case 'i':
         return 'imes';
-        break;
       case 'a':
         return 'ai';
-        break;
       case 'o':
         return 'ober';
-        break;
       case 'u':
         return 'ufat';
-        break;
       default:
         return char;
-        break;
     }
   });
   aux = text;
@@ -64,11 +69,10 @@ decryptBtn.addEventListener('click', function () {
 
   resText.innerHTML = aux;
   text = aux;
-  
 });
 
 copyBtn[0].addEventListener('click', () => {
-  copy(text);
+  copy(firstSentence);
 });
 copyBtn[1].addEventListener('click', () => {
   copy(resText.textContent);
