@@ -12,11 +12,24 @@
       href="https://fonts.googleapis.com/css2?family=Alkatra&family=Roboto+Condensed&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <main>
-      <h1>Text Encryption by <span>Ieremy Flores</span></h1>
-      <p class="disclamer">Solo letras minúsculas y sin acentos</p>
+      <div class="title-div">
+        <img src="./img/alura-logo.svg" alt="Logo de Alura" class="logo" />
+        <h1 class="title-h1">Text Encryption by <span>Ieremy Flores</span></h1>
+      </div>
+      <p class="disclamer">
+        Este software permite encriptar mensajes, lo cual es una caracteristica
+        esencial en la trasmisión de paquetes de comunicación hoy en día
+      </p>
       <section>
         <div class="encryption-div">
           <div class="text-div">
@@ -35,11 +48,34 @@
           </div>
         </div>
         <div class="resultado">
-          <div id="res-text-output" class="text-output-div">
-          </div>
+          <div id="res-text-output" class="text-output-div"></div>
           <button class="copiar-btn">copy</button>
         </div>
       </section>
+      <section class="contact">
+        <a
+          href="https://www.linkedin.com/in/ieremy-flores-condori-a07036233/"
+          title="Link to Linkedin Profile"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="https://twitter.com/JeremyFloresCo1"
+          title="Link to Twitter Profile"
+          target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a
+          href="https://github.com/JeremyFlores137"
+          title="Link to Github Profile"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i
+        ></a>
+      </section>
+      <footer>
+        <i class="fa-regular fa-copyright"></i> Copyright Ieremy Flores 2023
+      </footer>
     </main>
     <script src="./index.js"></script>
   </body>

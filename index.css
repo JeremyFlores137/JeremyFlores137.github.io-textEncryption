@@ -12,6 +12,17 @@ h1 {
   color: #1d3557;
   font-family: 'Roboto Condensed', sans-serif;
 }
+div.title-div {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+}
+h1.title-h1 {
+  text-align: center;
+}
+.logo {
+  display: none;
+}
 span {
   font-style: italic;
   color: #03045e;
@@ -132,7 +143,39 @@ section {
 .ops-img {
   width: 20em;
 }
-
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3.5em auto;
+  margin-bottom: 1em;
+}
+i {
+  font-size: 2.4rem;
+}
+.contact i {
+  padding: 0 0.5rem;
+  color: #03045e;
+}
+.contact i:hover,
+.contact i:focus {
+  font-size: 2.8rem;
+  transition: all 0.3s;
+}
+footer {
+  padding: 0;
+  font-style: italic;
+  padding: 1em;
+  font-size: 0.8rem;
+}
+footer i {
+  font-size: 0.8rem;
+}
+@media (max-width: 700px) {
+  h1.title-h1 {
+    margin: auto;
+  }
+}
 @media (min-width: 700px) {
   section {
     flex-direction: row;
@@ -140,4 +183,21 @@ section {
   .resultado {
     margin-left: 1em;
   }
+  footer i {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 1rem;
+  }
+  h1.title-h1 {
+    width: 100%;
+    margin-left: -80px;
+  }
+  .logo {
+    display: flex;
+    align-self: center;
+    width: 70px;
+    height: 50px;
+  }
+
 }

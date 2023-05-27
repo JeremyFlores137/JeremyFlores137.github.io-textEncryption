@@ -5,13 +5,13 @@ const textInput = document.getElementById('text-input');
 let resText = document.getElementById('res-text') | '';
 const resTextOutput = document.getElementById('res-text-output');
 let text = '';
-let firstSentence =''
+let firstSentence = '';
 let aux = '';
 
 textInput.addEventListener('input', function (e) {
   text = e.target.value;
   aux = text;
-  firstSentence = text
+  firstSentence = text;
 });
 
 encryptBtn.addEventListener('click', function () {
@@ -32,7 +32,6 @@ encryptBtn.addEventListener('click', function () {
                               >
                             </textarea>`;
   resText = document.getElementById('res-text');
-  textInput.disabled = true;
   decryptBtn.disabled = false;
   text = text.split('');
   text = text.map((char) => {
