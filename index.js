@@ -77,13 +77,25 @@ copyBtn[1].addEventListener('click', () => {
   copy(resText.textContent);
 });
 
+function customAlert(msg, duration) {
+  var styler = document.createElement('div');
+  styler.classList.add('alert');
+  styler.innerHTML = '<p style="color: #155724; padding: 0 0.8em; font-size: 1.3rem">' + msg + '</p>';
+  setTimeout(function () {
+    styler.parentNode.removeChild(styler);
+  }, duration);
+  document.body.insertAdjacentElement('afterbegin', styler);
+}
+
 function copy(e) {
-  navigator.clipboard
-    .writeText(e)
-    .then(() => {
-      alert('successfully copied');
-    })
-    .catch(() => {
-      alert('something went wrong');
-    });
+  if (e !== undefined) {
+    navigator.clipboard
+      .writeText(e)
+      .then(() => {
+        customAlert('successfully copied! 😀', 2000);
+      })
+      .catch(() => {
+        customAlert('something went wrong 😕', 2000);
+      });
+  }
 }
