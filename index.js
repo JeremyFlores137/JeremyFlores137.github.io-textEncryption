@@ -88,7 +88,7 @@ function customAlert(msg, duration) {
 }
 
 function copy(e) {
-  if (e !== undefined) {
+  if (e !== undefined && e !== '') {
     navigator.clipboard
       .writeText(e)
       .then(() => {
